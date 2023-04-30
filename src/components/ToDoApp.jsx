@@ -1,18 +1,16 @@
-import Header from "./Header";
-import ToDosLogic from "./ToDologic";
-import Footer from "./footer";
+import Header from './Header';
+import ToDosLogic from './ToDologic';
+import Footer from './footer';
 
-const ToDoApp = () => {
-  return (
-    <div className="wrapper">
-      <div className="todos">
-        <Header />
-        <ToDosLogic />
-      </div>
-      <Footer/>
+const ToDoApp = () => (
+  <div className="wrapper">
+    <div className="todos">
+      <Header />
+      <ToDosLogic />
     </div>
-   
-  );
-}
+    <Footer />
+  </div>
 
-export default ToDoApp
+);
+
+export default ToDoApp;

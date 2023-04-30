@@ -1,4 +1,4 @@
-import styles from '../styles/header.module.css'
+import styles from '../styles/header.module.css';
 
 const Header = () => {
   const headerStyle = {
@@ -12,7 +12,7 @@ const Header = () => {
       <h1>ToDos</h1>
       <p>Add items to your list</p>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
-import styles from '../styles/ToDoItem.module.css'
-import { FaTrash } from "react-icons/fa";
-import { AiFillEdit } from "react-icons/ai";
+import { FaTrash } from 'react-icons/fa';
+import { AiFillEdit } from 'react-icons/ai';
+import styles from '../styles/ToDoItem.module.css';
 
-const ToDoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const ToDoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const completedStyle = {
     fontStyle: 'italic',
     color: '#595959',
@@ -11,25 +13,25 @@ const ToDoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
     textDecoration: 'line-through',
   };
 
-  const [editing, setEditing] = useState(false)
+  const [editing, setEditing] = useState(false);
 
   const handleEditing = () => {
     setEditing(true);
-  }
+  };
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {
     editMode.display = 'none';
   }
 
-  const editInputRef = useRef(null)
+  const editInputRef = useRef(null);
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
-      setUpdate(editInputRef.current.value, itemProp.id)
+      setUpdate(editInputRef.current.value, itemProp.id);
       setEditing(false);
     }
   };
@@ -37,12 +39,13 @@ const ToDoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   return (
     <li className={styles.item}>
       <div className={styles.content} style={viewMode}>
-        <input type="checkbox"
+        <input
+          type="checkbox"
           checked={itemProp.completed}
           onChange={() => handleChange(itemProp.id)}
         />
-        <button className='editBtn' onClick={handleEditing}><AiFillEdit/></button>
-        <button className='deleteBtn' onClick={() => delTodo(itemProp.id)}><FaTrash/></button>
+        <button type="button" className="editBtn" aria-label="edit-button" onClick={handleEditing}><AiFillEdit /></button>
+        <button type="button" className="deleteBtn" aria-label="delete-button" onClick={() => delTodo(itemProp.id)}><FaTrash /></button>
         <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
         </span>
@@ -56,7 +59,7 @@ const ToDoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
         onKeyDown={handleUpdatedDone}
       />
     </li>
-  )
-}
+  );
+};
 
-export default ToDoItem
+export default ToDoItem;
