@@ -1,0 +1,10 @@
+footer {
+  position: fixed;
+  background-color: bisque;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+  color: rgb(174, 173, 173);
+}
