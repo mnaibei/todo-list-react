@@ -37,7 +37,7 @@
 > This is an app that lets you plan your day using a ToDo list.
 
 ## 🛠 Built With <a name="built-with"></a>
-
+React.js
 ### Tech Stack <a name="tech-stack"></a>
 
 > React
@@ -49,15 +49,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Calculator]**
-- **[Math Quotes]**
-- **[Multipe pages]**
+- **[Add Task]**
+- **[Edit Task]**
+- **[Delete Task]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://math-magicians-3ru1.onrender.com/)
+- [Live Demo Link](https://todo-list-app-457c.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
